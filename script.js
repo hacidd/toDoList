@@ -35,6 +35,7 @@ const prepareDOMEvents = () => {
 	ulList.addEventListener('click', checkClick)
 	popupCloseBtn.addEventListener('click', closePopup)
 	popupAddBtn.addEventListener('click', changeTodoText)
+    todoInput.addEventListener('keyup', enterKeyCheck)
 	// nadajemy nasluchiwanie
 }
 
@@ -81,6 +82,12 @@ const checkClick = e => {
 	} else if (e.target.matches('.delete')) {
 		deleteTodo(e)
 	}
+}
+
+const enterKeyCheck = e => {
+    if (e.key === 'Enter') {
+        addNewTodo()
+    }
 }
 
 const editTodo = e => {
