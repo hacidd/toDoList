@@ -1,15 +1,15 @@
-let todoInput // miejsce, gdzie uzytkownik wpisuje tresc zadania
-let errorInfo // info o brtaku zadan. koniecznosci wpisania tesktu
-let addBtn // przydcisk ADD - dodaje nowe elementy do listy
-let ulList // lista zadan, tagi UL
-let newTodo // nowo dodane zadanie
+let todoInput // input for users new tasks
+let errorInfo // error info 
+let addBtn // button for adding new taks to list
+let ulList // list of tasks 
+let newTodo // new added task
 
 let popup // popup
-let popupInfo // tekst w popupie, jak sie doda pusty tekst
-let todoToEdit // edytowany todo
-let popupInput // input w popupie
-let popupAddBtn // przycisk "zatwierdz" w popupie
-let popupCloseBtn // przycisk "anuluj" w popupie
+let popupInfo // text in popup alert
+let todoToEdit // edit
+let popupInput // input in popup
+let popupAddBtn // accept button in popup
+let popupCloseBtn // cancel button in popup
 
 const main = () => {
 	prepareDOMElements()
@@ -27,7 +27,7 @@ const prepareDOMElements = () => {
 	popupInput = document.querySelector('.popup-input')
 	popupAddBtn = document.querySelector('.accept')
 	popupCloseBtn = document.querySelector('.cancel')
-	// pobieramy wszystkie elementy
+	// space for all global selectors
 }
 
 const prepareDOMEvents = () => {
@@ -36,7 +36,7 @@ const prepareDOMEvents = () => {
 	popupCloseBtn.addEventListener('click', closePopup)
 	popupAddBtn.addEventListener('click', changeTodoText)
     todoInput.addEventListener('keyup', enterKeyCheck)
-	// nadajemy nasluchiwanie
+	// spance for listeners
 }
 
 const addNewTodo = () => {
@@ -123,4 +123,4 @@ const deleteTodo = e => {
 }
 
 document.addEventListener('DOMContentLoaded', main)
-// zabezpiecza przed wczytaniem się skryptów zanim cała strona nie zostanie załadowana
+// prevents from upload script before website is fully operationa; 
